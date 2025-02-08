@@ -1,0 +1,150 @@
+body{
+    background-color: black;color: #ffffff;
+    font-family: "Oxanium", serif;
+    font-size: 20px;
+}
+
+.titulos {
+    color: #ffffff;
+    font-family: "Oxanium", serif;
+   
+}
+
+p{
+    color: #ffffff;
+    font-family: "Oxanium", serif;
+    font-size: 20px;
+}
+i{
+    color: #ffffff;
+    font-size: 50px;
+}
+.info {
+    display: flex;
+    justify-content: center; /* Distribuye el espacio entre los elementos */
+  }
+.item {
+    padding: 10px; /* Espaciado interno opcional */
+}
+
+.imagenes {
+    display: flex; /* Coloca los elementos en una línea */
+    justify-content: space-between; /* Espacio uniforme entre las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten si no caben */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 20px); /* Ajusta cada tarjeta a un tercio del contenedor menos el gap */
+    max-width: 300px; /* Limita el ancho máximo */
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+  }
+  
+  .card img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción */
+  }
+  
+  .card-body {
+    padding: 10px; /* Añade espaciado interno */
+  }
+  
+  .cartas{
+    background-color: #B0B0B0;
+  }
+  li{
+    list-style: none;
+    color: #ffffff;
+    font-family: "Oxanium", serif;
+    font-size: 20px;
+  }
+  a{
+    text-decoration: none;
+  }
+  .iconos{
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+/* General */
+body {
+  font-family: 'Oxanium', sans-serif;
+}
+
+/* Contenedor Gopher */
+.gopher-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+/* Gopher grande */
+.gopher-large {
+  position: absolute;
+  top: 250px;
+  left: 100%;
+  transform: translateX(-50%);
+  max-width: 200px;
+}
+
+/* Gopher pequeño */
+.gopher-small {
+  display: none;
+  top: 80%;
+}
+
+/* Animación de flotación */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.gopher-large {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Íconos */
+.info {
+  display: flex; /* Coloca los elementos en una línea */
+  flex-direction: row; /* Asegura que los elementos estén en línea horizontal */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 15px; /* Espaciado uniforme entre los íconos */
+}
+
+.item {
+  list-style: none; /* Elimina el estilo de lista */
+  margin: 0 5px; /* Espaciado opcional entre los elementos */
+}
+
+.info .item a {
+  font-size: 2rem; /* Tamaño de los íconos */
+  color: #ffffff; /* Color blanco */
+  transition: color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.info .item a:hover {
+  color: #007bff; /* Color azul al pasar el mouse */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gopher-large {
+      display: none;
+  }
+
+  .gopher-small {
+      display: block;
+      max-width: 150px;
+      margin: 0 auto;
+  }
+
+  .info {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+  }
+}
